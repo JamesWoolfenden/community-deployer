@@ -1,5 +1,5 @@
 - name: installing datastax community
-  apt: name=cassandra state=present update_cache=yes
+  apt: pkg=cassandra state=present update-cache=yes
 
 - name: creating jna symlink
   shell: ln -s /usr/share/java/jna.jar /usr/share/dse/cassandra/lib || true
