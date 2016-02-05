@@ -1,0 +1,8 @@
+- name: installing datastax community
+  apt: name=cassandra state=present update_cache=yes
+
+- name: creating jna symlink
+  shell: ln -s /usr/share/java/jna.jar /usr/share/dse/cassandra/lib || true
+
+- name: configuring datastax community
+  template: src=templates/cassandra.yaml dest=/etc/cassandra/cassandra.yaml
