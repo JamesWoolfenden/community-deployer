@@ -1,5 +1,5 @@
 - name: installing datastax community
-  apt: pkg=cassandra state=installed update_cache=yes force=yes
+  apt: pkg=cassandra state=installed force=yes
   register: cassandra
 
 - name: creating jna symlink
